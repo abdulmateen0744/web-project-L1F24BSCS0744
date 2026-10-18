@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderly | Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+  <nav class="tabs">
+    <a href="index.html">Home</a>
+    <a href="media.html">Media &amp; Info</a>
+    <a href="register.html" aria-current="page">Register</a>
+  </nav>
+
+  <main class="form-wrap">
+    <h1>Traveller Registration</h1>
+    <p>Fill in the form below. Fields marked <span class="req-note">*</span> are required.</p>
+
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Personal details</legend>
+
+        <div class="row">
+          <div class="field">
+            <label for="name" class="req">Full name</label>
+            <input type="text" id="name" name="name" required minlength="3" maxlength="40"
+                   placeholder="e.g. Ayesha Khan">
+          </div>
+          <div class="field">
+            <label for="ref">Reference number (auto)</label>
+            <input type="text" id="ref" name="ref" value="WND-2026-0001" readonly>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="email" class="req">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="pass" class="req">Password</label>
+            <input type="password" id="pass" name="pass" required minlength="8" maxlength="20">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="site">Personal website (optional)</label>
+          <input type="url" id="site" name="site" placeholder="https://">
+        </div>
+
+        <div class="field">
+          <label for="country">Country of residence</label>
+          <input type="text" id="country" name="country" value="Pakistan" disabled>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Trip details</legend>
+
+        <div class="row">
+          <div class="field">
+            <label for="dest" class="req">Destination</label>
+            <select id="dest" name="dest" required>
+              <option value="">-- Choose --</option>
+              <option value="hunza">Hunza Valley</option>
+              <option value="alps" selected>Swiss Alps</option>
+              <option value="maldives">Maldives</option>
+              <option value="bali">Bali</option>
+              <option value="cairo" disabled>Cairo (sold out)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date" class="req">Travel date</label>
+            <input type="date" id="date" name="date" required min="2026-10-17" max="2027-12-31">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="time">Preferred departure time</label>
+            <input type="time" id="time" name="time" value="09:00">
+          </div>
+          <div class="field">
+            <label for="travelers">Number of travelers</label>
+            <input type="number" id="travelers" name="travelers" min="1" max="20" value="1">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="budget">Budget per person (USD): <small>100 to 5000</small></label>
+          <input type="range" id="budget" name="budget" min="100" max="5000" step="50" value="1000">
+        </div>
+
+        <fieldset>
+          <legend>Trip style</legend>
+          <label class="inline"><input type="radio" name="style" value="budget"> Budget</label>
+          <label class="inline"><input type="radio" name="style" value="comfort" checked> Comfort</label>
+          <label class="inline"><input type="radio" name="style" value="luxury"> Luxury</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Extras</legend>
+          <label class="inline"><input type="checkbox" name="extra" value="hotel" checked> Hotel</label>
+          <label class="inline"><input type="checkbox" name="extra" value="flights"> Flights</label>
+          <label class="inline"><input type="checkbox" name="extra" value="guide"> Local guide</label>
+          <label class="inline"><input type="checkbox" name="extra" value="meals"> Meals</label>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>Extra information</legend>
+
+        <div class="row">
+          <div class="field">
+            <label for="color">Favourite trip colour</label>
+            <input type="color" id="color" name="color" value="#0a8f8f">
+          </div>
+          <div class="field">
+            <label for="passport">Passport photo</label>
+            <input type="file" id="passport" name="passport" accept="image/*">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Special requests</label>
+          <textarea id="notes" name="notes" rows="3" maxlength="200"
+                    placeholder="Anything we should know?"></textarea>
+        </div>
+      </fieldset>
+
+      <p class="hint">Read our <a href="https://example.com/terms">terms and conditions</a> before you submit.</p>
+
+      <div class="buttons">
+        <button type="submit">Register</button>
+        <button type="reset">Clear form</button>
+      </div>
+
+    </form>
+  </main>
+
+  <footer class="tabs-footer">
+    <a href="index.html">Home</a> | <a href="media.html">Media &amp; Info</a> | <a href="register.html">Register</a>
+  </footer>
+
+</body>
+</html>
