@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderly | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <header class="top-bar">
+    <a href="index.html" class="logo">&#9992; Wander<span>ly</span></a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="media.html">Media &amp; Info</a>
+      <a href="register.html">Register</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="active" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+
+    <section class="about">
+      <h1>About Wanderly</h1>
+      <img src="https://picsum.photos/seed/contact-team/700/400" alt="The Wanderly travel team">
+      <p>We are a small team of travellers who love helping people see the world.
+        Since 2020 we have planned trips for hundreds of guests, from mountain
+        treks to beach holidays.</p>
+      <ul class="facts">
+        <li><strong>500+</strong> happy travellers</li>
+        <li><strong>25</strong> destinations</li>
+        <li><strong>24/7</strong> trip support</li>
+      </ul>
+      <p class="office">Office hours: Monday to Saturday, 9:00 to 18:00</p>
+    </section>
+
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form id="contactForm" action="#" method="post" novalidate>
+
+        <div class="field">
+          <label for="cname">Your name</label>
+          <input type="text" id="cname" name="cname" required minlength="3" placeholder="e.g. Ayesha Khan">
+          <small class="msg" id="nameMsg"></small>
+        </div>
+
+        <div class="field">
+          <label for="cemail">Email</label>
+          <input type="email" id="cemail" name="cemail" required placeholder="you@example.com">
+          <small class="msg" id="emailMsg"></small>
+        </div>
+
+        <div class="field">
+          <label for="cmessage">Message</label>
+          <textarea id="cmessage" name="cmessage" rows="5" maxlength="200" required
+                    placeholder="How can we help?"></textarea>
+          <small class="msg" id="countMsg">0 / 200</small>
+        </div>
+
+        <button type="submit" id="sendBtn" disabled>Send Message</button>
+        <p class="success" id="successMsg" hidden>Thank you! We will reply soon.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="media.html">Media &amp; Info</a> |
+      <a href="register.html">Register</a> |
+      <a href="services.html">Services</a> |
+      <a href="portfolio.html">Portfolio</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>&copy; 2026 Wanderly</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>
